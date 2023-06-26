@@ -13,7 +13,7 @@ $right-margin: 2rem;
 
 body {
   overflow-x: hidden;
-  height: 300vh;
+  height: 3000px;
 }
 
 .modal-menu-wrapper {
@@ -59,20 +59,22 @@ body {
 }
 
 .modals__item {
-  position: absolute;
+  position: fixed;
   display: flex;
   width: 0px;
+  height: 100%;
   align-items: center;
   justify-content: center;
   background-color: #484848;
   overflow: hidden;
   opacity: 0%;
+  z-index: 2;
   transition: all ease-in-out .5s;
 
   &--active {
     opacity: 80%;
     width: auto;
-    inset:0;
+    inset: 0;
   }
 }
 

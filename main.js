@@ -1,7 +1,27 @@
 import './style.scss'
 import IMask from 'imask';
 
-const  modalMenu = document.querySelector('.modal-menu');
+document.body.insertAdjacentHTML('beforeend', `
+    <div class="modal-menu">
+        <div class="modal-menu__burger"></div>
+        <div class="modal-menu-wrapper">
+        <div class="modal-menu__item" data-modal-id="modal-1">
+            <img src="./assets/img/modals/c1.png" alt="" class="">
+        </div>
+        <div class="modal-menu__item" data-modal-id="modal-2">
+            <img src="./assets/img/modals/c2.png" alt="" class="">
+        </div>
+        <div class="modal-menu__item" data-modal-id="modal-3">
+            <img src="./assets/img/modals/c3.png" alt="" class="">
+        </div>
+        <div class="modal-menu__item modal-menu__item--animate " id="scroll-to-top">
+            <img src="./assets/img/modals/c4.png" alt="" class="">
+        </div>
+        </div>
+    </div>
+`);
+
+const modalMenu = document.querySelector('.modal-menu');
 const burgerButton = document.querySelector('.modal-menu__burger');
 const modals = document.querySelector('.modals')
 const scrollButton = document.getElementById('scroll-to-top');
