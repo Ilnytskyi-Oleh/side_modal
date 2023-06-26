@@ -1,9 +1,11 @@
 import './style.scss'
+import IMask from 'imask';
 
 const  modalMenu = document.querySelector('.modal-menu');
 const burgerButton = document.querySelector('.modal-menu__burger');
 const modals = document.querySelector('.modals')
 const scrollButton = document.getElementById('scroll-to-top');
+const modalCalcInput = document.getElementById('modal-calc-input');
 
 modalMenu.addEventListener('click', (e) => {
     const menuItem = e.target.closest('.modal-menu__item');
@@ -64,6 +66,12 @@ scrollButton.addEventListener('click', () => {
     window.scrollTo({top: 0, behavior: "smooth"});
 })
 
+if ( modalCalcInput ) {
+    const maskOptions = {
+        mask: '+380(00)000-00-00'
+      };
+      const mask = IMask(modalCalcInput, maskOptions);
+}
 
 
 
